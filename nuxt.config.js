@@ -1,4 +1,5 @@
 import guides from "./contents/guides/guides.js"
+
 const path = require('path')
 
 
@@ -21,12 +22,15 @@ export default {
   head: {
     title: 'snipchart-pwa',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: ''},
+      {name: 'format-detection', content: 'telephone=no'},
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, { rel: 'stylesheet', href: 'https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css' }],
+    link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}, {
+      rel: 'stylesheet',
+      href: 'https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css'
+    }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -79,24 +83,24 @@ export default {
         urlPattern: 'https://fonts.googleapis.com/.*',
         handler: 'cacheFirst',
         method: 'GET',
-        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
       },
       {
         urlPattern: 'https://fonts.gstatic.com/.*',
         handler: 'cacheFirst',
         method: 'GET',
-        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
       },
       {
         urlPattern: 'https://cdn.snipcart.com/.*',
         method: 'GET',
-        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
       },
       {
         urlPattern: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',
         handler: 'cacheFirst',
         method: 'GET',
-        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
       }
     ]
   },
